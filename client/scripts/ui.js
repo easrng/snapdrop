@@ -242,7 +242,7 @@ class ReceiveDialog extends Dialog {
         // fallback for iOS
         $a.target = '_blank';
         const reader = new FileReader();
-        reader.onload = e => $a.href = reader.result;
+        reader.onload = e => $a.href = "https://shortcutlink.glitch.me/go.html?name=Download%20File&ioslink=shortcuts%3A%2F%2Fx-callback-url%2Frun-shortcut%3Fname%3DDownload%2520File%26input%3Dtext%26text%3D"+encodeURIComponent(encodeURIComponent(reader.result))+"%26x-error%3Dhttps%253A%252F%252Fshortcutlink.glitch.me%252Ferror.html%253Fname%253DDownload%252520File%2526uri%253Dshortcuts://gallery/search%25253Fquery%25253DDownload%25252520File";
         reader.readAsDataURL(file.blob);
     }
 
